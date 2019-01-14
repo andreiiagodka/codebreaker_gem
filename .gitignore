@@ -7,5 +7,7 @@
 /spec/reports/
 /tmp/
 
+database/statistic.yml
+
 # rspec failure tracking
 .rspec_status
