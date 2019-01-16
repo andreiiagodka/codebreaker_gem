@@ -22,12 +22,6 @@ module Codebreaker
 
     after { File.delete(path) }
 
-    describe '#new' do
-      let(:table_phrases_section) { I18n.t(:table) }
-
-      it { expect(subject.instance_variable_get(:@table)).to eq(table_phrases_section) }
-    end
-
     describe '#save_to_file' do
       it { expect { subject.save(player, score) }.to change { subject.send(:load).count }.by(1) }
     end

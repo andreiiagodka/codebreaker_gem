@@ -8,16 +8,13 @@ module Codebreaker
 
     STATISTIC_YML = DB_DIR + '/' + STATISTIC_FILE_NAME + YML_FORMAT
 
-    def initialize
-      @table = I18n.t(:table)
-    end
-
     def save(player, score)
       new_record = record(player, score)
       save_to_file(new_record)
     end
 
     def rating_table
+      @table = I18n.t(:table)
       table = Terminal::Table.new
       table.title = @table[:title]
       table.headings = @table[:headings]
