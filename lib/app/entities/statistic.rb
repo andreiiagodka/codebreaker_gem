@@ -25,6 +25,10 @@ module Codebreaker
       table
     end
 
+    def load_statistics
+      File.exist?(STATISTIC_YML) ? load.each.map { |record| record } : []
+    end
+
     private
 
     def record(player, score)
