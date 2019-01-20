@@ -90,7 +90,7 @@ module Codebreaker
         it "when result is #{item[2]} if code is - #{item[0]}, guess is #{item[1]}" do
           game.instance_variable_set(:@secret_code, item[0])
           guess = item[1]
-          expect(game.mark_guess(guess.join)).to eq item[2].join
+          expect(game.mark_guess(guess.join)).to eq item[2]
         end
       end
     end

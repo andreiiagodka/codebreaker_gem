@@ -45,7 +45,7 @@ module Codebreaker
     def mark_guess(guess_code)
       @converted_input = convert_to_digit_array(guess_code)
       @cloned_code = @secret_code.clone
-      convert_to_string(exact_match.compact + number_match.compact)
+      exact_match.compact + number_match.compact
     end
 
     private
